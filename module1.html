@@ -42,7 +42,7 @@ This single-page template is used for each learning module.
   </head>
   <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">dmackinnon1.github.io</a>
+    <a class="navbar-brand" href="..">dmackinnon1.github.io</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -57,14 +57,17 @@ This single-page template is used for each learning module.
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Modules</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">What is LaTeX?</a>
-            <a class="dropdown-item" href="#">LaTeX as a Digital Literacy</a>
+            <a class="dropdown-item" href="./module0.html">0: What is LaTeX?</a>
+            <a class="dropdown-item" href="./module1.html">1: Getting Started</a>
+            <a class="dropdown-item" href="./module2.html">2: Essential LaTeX Commands</a>
+            <a class="dropdown-item" href="./module3.html">3: Cloud-based LaTeX Environments</a>
+            <a class="dropdown-item" href="./module4.html">4: LaTeX on Various Platforms</a>
+            <a class="dropdown-item" href="./module5.html">5: LaTeX as a Digital Literacy</a>           
           </div>
         </li>
       </ul>
     </div>
-    </nav>
-
+  </nav>
 
 <main role="main">
 
@@ -74,7 +77,7 @@ This single-page template is used for each learning module.
  
   <div class="container">
     <!-- Row 1 introduction -->
-    <h1> Module 1: Online LaTeX </h1>
+    <h1> Module 1: Getting Started </h1>
     <div class="row" id="contents">
       <div class="col-md-8">
         <h2>Contents</h2>
@@ -95,9 +98,9 @@ This single-page template is used for each learning module.
         <h2>Learning Goals</h2>
         <p> The learning goals for this module include:
 		<ul>
-		<li>goal1</li>
-		<li>goal2</li>
-		<li>goal3</li>
+		<li>Identify some online LaTeX editors.</li>
+		<li>Practice using basic LaTeX commands using an online editor.</li>
+		<li>Learn how to use outputs from online editors in electronic documents.</li>
         </ul>
         </p>   
        </div>
@@ -106,7 +109,7 @@ This single-page template is used for each learning module.
 	<div class="row" id="before">
       <div class="col-md-8">
         <h2>Before You Start</h2>
-        <p> Blah blah		
+        <p> Take a moment and search online for "Latex editor"		
         </p>
         <p> Consider these questions:
         <ol>
@@ -122,20 +125,19 @@ This single-page template is used for each learning module.
 
 	<div class="row" id="main">
       <div class="col-md-8">
-        <h2>Online LaTeX</h2>
-       <p>
-       Blah blah
-	   For example, you type:
-	   <div class="dm-code">
-	    <br/><pre>
-	   \frac{x^2-2x+1}{x-1}
-	   </pre> </div>
-
-	   And LaTeX will generate:
-	   \[ \frac{x^2-2x+1}{x-1} \]	   
-	   </p>
-	   <p> Blah blah
-		     
+        <h2>Online LaTeX</h2> 
+    
+    <!-- Small LaTeX editor powered by codeCogs webservice -->    
+    <div class="input-group">
+  			<div class="input-group-prepend">
+    		<span class="input-group-text">Input LaTeX:</span>
+  			</div>
+  			<textarea id='latexInput' class="form-control" aria-label="Input LaTeX"></textarea>
+  			<button class="btn btn-secondary" onClick='getRenderedLatex()' role="button">Try It</button>
+		</div>
+		<br>      
+        <div id="renderedLatex" tyle="text-align:center;">  </div>
+    <!-- end of LaTeX editor -->
     </div>
     </div>	
     <hr>
@@ -208,5 +210,16 @@ This single-page template is used for each learning module.
 </footer>
 <script>
 MathJax.Hub.Typeset();
+let equationToRender = "";
+function getRenderedLatex(){
+  let equationToRender = document.getElementById("latexInput").value; 
+  let html = "<img src='https://latex.codecogs.com/png.latex?\\large " + equationToRender + "' title='LaTeX' ";
+  html += "style='padding:10px;border:thin solid black;'>"
+  document.getElementById("renderedLatex").innerHTML = html;
+}
+
+//set default
+document.getElementById("latexInput").value = "\\LaTeX";
+getRenderedLatex();
 </script>
 </html>
