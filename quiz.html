@@ -35,14 +35,11 @@ This single-page template is used for each learning module.
 		background:azure;
 	}
     </style>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        extensions: ["tex2jax.js", "TeX/AMSmath.js"],
-        jax: ["input/TeX", "output/SVG"],
-    })
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=default"></script>
-  </head>
+
+<script type="text/javascript"	
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  console.log("downloading mathjax")
+</script>  </head>
   <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="..">dmackinnon1.github.io</a>
@@ -92,7 +89,7 @@ This single-page template is used for each learning module.
       <div class="col-md-8">
         <h2>LaTeX Command Quiz</h2> 
     <p>
-	Use your growing knowledge of LaTeX commands to create the math displayed.
+	Use your growing knowledge of LaTeX commands to create the math displayed in the question below.
 	</p>
 	<p>First, try to input the correct commands to match the displayed math, and press the
 	<strong>Try It</strong> button to test your answer.
@@ -159,13 +156,14 @@ let questions = [
 'D = b^2-4ac ',
 '\\ \\{x \\in \\textbf{R} | x \\leq 1\\} ',
 '-1 \\leq y \\leq +1',
-'\\sum^{6}_{1}i = 21',
+'\\sum^{6}_{i=1}i = 21',
 'x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}',
 'y=f(x)',
 'e^{i\\pi} = -1',
 '\\cos(\\pi) = -1',
 '\\sqrt[3]{27} = 3',
 '\\sqrt{-1} = i',
+"\\binom{n}{r} = \\frac{n!}{r!(n-r)!}"
 ];
 
 let current = questions[Math.floor(Math.random()*questions.length)];
