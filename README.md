@@ -1,6 +1,6 @@
 # LaTeX101
 
-A digital learning resource for highschool mathematics teachers.
+A digital learning resource for high school mathematics teachers.
 
 There are a few ways in which this resource differes from most available treatments of LaTeX.
 1. The focus is on high school mathematics teachers, rather than researchers or grad students.
