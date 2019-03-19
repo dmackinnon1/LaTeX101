@@ -12,7 +12,7 @@ There are a few ways in which this resource differes from most available treatme
 The assumption is that high school math teachers are increasingly using digital platforms for communicating mathematics. Many of these platforms are integrating partial LaTeX support as a solution for displaying math notation and symbols. For platforms that lack this support, there are stand-alone LaTeX equation editors that can be used to generate images that can be imported.
 
 ## Live version
-A live version can be accessed [here}(https://dmackinnon1.github.io/LaTeX101/).
+A live version can be accessed [here](https://dmackinnon1.github.io/LaTeX101/).
 
 ## Utilities
 The course includes a [simple LaTeX renderer](https://dmackinnon1.github.io/LaTeX101/simpleLaTeX.html) and a [LaTeX Command Quiz](https://dmackinnon1.github.io/LaTeX101/quiz.html)
