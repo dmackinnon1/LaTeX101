@@ -14,5 +14,10 @@ The assumption is that high school math teachers are increasingly using digital 
 ## Live version
 A live version can be accessed [here](https://dmackinnon1.github.io/LaTeX101/).
 
+## Running as an In-Person Workshop
+Although intended to function as a self-directed learning resource, the LaTeX101 digital learning resource can be used as an in-person hands on workshop. In this context, having participants work on and potentially share their "cheetsheet" from Exercise 1 throughout, would be a way to tie the course together.
+
+In an in-person workshop, a possible flow would be to allow participants to go ahead and work through the material of each module, pausing to consolidate after around 15 minutes for each. This would break the workshop up into two sections of about 45 minutes each.
+
 ## Utilities
-The course includes a [simple LaTeX renderer](https://dmackinnon1.github.io/LaTeX101/simpleLaTeX.html) and a [LaTeX Command Quiz](https://dmackinnon1.github.io/LaTeX101/quiz.html)
+In addition to the learning modules, the learning resource includes a [simple LaTeX renderer](https://dmackinnon1.github.io/LaTeX101/simpleLaTeX.html) and a [LaTeX Command Quiz](https://dmackinnon1.github.io/LaTeX101/quiz.html)
